@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1474624-f88b-435b-b09b-0e39ca89799f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select p.grandtotal,p.purchasedate,p.purchaseid,p.time,c.namec,c.address from purchase p,customer c where c.customerid=p.purchaseid]]>
+	</queryString>
+	<field name="grandtotal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="purchasedate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="purchaseid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="time" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namec" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="191" y="0" width="189" height="46" uuid="bdd00a52-7016-4b89-8fe9-333d5d29f7ba"/>
+				<textElement>
+					<font fontName="Cambria" size="36" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RED CAFE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="179" y="0" width="230" height="35" uuid="5fd3393a-3b85-4240-86ca-b573332e1bf1"/>
+				<textElement>
+					<font fontName="Bahnschrift" size="24"/>
+				</textElement>
+				<text><![CDATA[MONTHLY REPORT]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="24" width="67" height="20" uuid="c4f5f6da-b12c-4b02-b95a-32d73ca74f4e"/>
+				<textElement>
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INVOICE NO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="67" y="24" width="60" height="20" uuid="6fe089ef-38b8-43b4-a43e-d1a51e444d95"/>
+				<textElement>
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="24" width="64" height="20" uuid="ed5ce630-2246-4182-ad0a-97a7447da28b"/>
+				<textElement>
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="24" width="114" height="20" uuid="3a5b6e3d-d7a3-4ceb-a2e7-e0501f4d0ed1"/>
+				<textElement>
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="24" width="125" height="20" uuid="19eb1754-1903-42cf-8095-76cddcb32b3c"/>
+				<textElement>
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADDRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="24" width="100" height="20" uuid="93eb901b-77f1-497f-9899-ce7d2a0be216"/>
+				<textElement textAlignment="Right">
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRICE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="83" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="67" height="20" uuid="d2665054-b65e-4ed2-a9dd-2b2f3a4f2fd4"/>
+				<textFieldExpression><![CDATA[$F{purchaseid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-188" y="10" width="100" height="20" uuid="b1425111-0d03-4d58-8195-dbd60d5505c0"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-188" y="10" width="100" height="20" uuid="01d149df-6254-46fb-b344-cefcb573dae5"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-188" y="10" width="100" height="20" uuid="95d2f245-639b-43c8-a607-2440114291cc"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-188" y="10" width="100" height="20" uuid="8776bfe3-0258-4663-852a-639d456e0575"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="0" width="60" height="20" uuid="30f1c27d-5014-4228-897b-edd6ba7b745f"/>
+				<textFieldExpression><![CDATA[$F{purchasedate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="127" y="0" width="64" height="20" uuid="0ab9c294-315b-4330-b77f-24d2489b70c1"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="216" y="0" width="114" height="20" uuid="5cb326db-5df4-40cf-a218-bb5c7229db12"/>
+				<textFieldExpression><![CDATA[$F{namec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="125" height="20" uuid="f3fee4b5-51c4-4744-80d6-4912edf6fde7"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="375859bf-3f0d-43b9-a253-8dcf9bf6fb6b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{grandtotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="-188" y="10" width="100" height="20" uuid="cdc485db-c8d5-4561-8cd2-d5025a2390cb"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9472fa57-c793-4613-a41c-4037c86ae9d4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select p.grandtotal,p.purchasedate,p.purchaseid,p.time,c.namec,c.address from purchase p,customer c where c.customerid=p.purchaseid]]>
+	</queryString>
+	<field name="grandtotal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="purchasedate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="purchaseid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="time" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namec" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="64" splitType="Stretch">
+			<staticText>
+				<reportElement x="203" y="0" width="184" height="57" uuid="102679b2-6245-4538-87bb-a60d931c0b28"/>
+				<textElement>
+					<font fontName="Lucida Sans" size="36"/>
+				</textElement>
+				<text><![CDATA[RED CAFE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="204" y="22" width="183" height="31" uuid="b8ab73bb-75be-4ee7-b10f-9cf5201c5c43"/>
+				<textElement>
+					<font fontName="Bahnschrift" size="24"/>
+				</textElement>
+				<text><![CDATA[YEARLY REPORT]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="40" width="66" height="20" uuid="55706065-8fee-4e19-883c-c30a1dc97190"/>
+				<textElement>
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[INVOICE NO.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="68" y="40" width="81" height="20" uuid="a15c7cf7-fb8d-4888-b4ad-0ce322486b2b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DATE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="41" width="119" height="20" uuid="00e39e8d-ea3a-4116-8748-d7caf3c2257b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="40" width="79" height="20" uuid="419dc277-cdd9-4383-a167-ce80543d7446"/>
+				<textElement textAlignment="Right">
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PRICE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="365" y="41" width="100" height="20" uuid="567818ee-723b-4dd4-b6e4-78409ed26b2a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ADDRESS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="152" y="41" width="90" height="20" uuid="5942cd1a-1ca2-4ab4-8472-745d9865577c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Bahnschrift" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TIME]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="66" height="20" uuid="df820b2b-df9d-4b3e-86c1-adfce7fa3677"/>
+				<textFieldExpression><![CDATA[$F{purchaseid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="79" height="20" uuid="a6494c5d-4087-451f-b219-2fcfd4387411"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{grandtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="0" width="90" height="20" uuid="4aa2d077-a26e-4568-939c-dbb4beecdcad"/>
+				<textFieldExpression><![CDATA[$F{time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="0" width="70" height="20" uuid="58879cce-26ad-4b77-8163-3cc29cded2b7"/>
+				<textFieldExpression><![CDATA[$F{purchasedate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="246" y="0" width="119" height="20" uuid="b76a78ce-bb2e-4d81-8914-b9525dc8ebd6"/>
+				<textFieldExpression><![CDATA[$F{namec}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="365" y="0" width="100" height="20" uuid="a7b99952-3d49-4cce-b8cb-8ce06711e20a"/>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

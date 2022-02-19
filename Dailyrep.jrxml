@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04efcf75-bd0c-441d-a8a2-6d6191ae3380">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select sum(p.grandtotal),count(*),p.grandtotal,p.purchasedate,p.purchaseid,p.time,c.namec,c.address from purchase p,customer c where c.customerid=p.purchaseid]]>
+	</queryString>
+	<field name="sum(p.grandtotal)" class="java.lang.Double"/>
+	<field name="count(*)" class="java.lang.Long"/>
+	<field name="grandtotal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="purchasedate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="purchaseid" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="time" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namec" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="220" y="0" width="126" height="34" uuid="8805e3f7-cb0a-444e-a0b5-03841fd0cd9e"/>
+				<textElement>
+					<font fontName="Cambria" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RED CAFE]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="211" y="10" width="135" height="25" uuid="99b3da27-32a9-422d-9f6c-6865183454c1"/>
+				<textElement>
+					<font fontName="Arial" size="18"/>
+				</textElement>
+				<text><![CDATA[DAILY REPORT]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="6bbe0937-7227-4318-95ff-ed33b5c40bd1"/>
+				<textFieldExpression><![CDATA[$F{purchaseid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="100" height="20" uuid="c17371b7-b4d8-43ef-a7bc-6509a61ddf4f"/>
+				<textFieldExpression><![CDATA[$F{namec}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
